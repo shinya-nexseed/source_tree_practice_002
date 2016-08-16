@@ -1,4 +1,5 @@
 <?php
+    define('DEBUG', TRUE);
     echo 'Hello world';
 
     function add($num1, $num2) {
@@ -30,4 +31,20 @@
 
     $result = minus(10,4);
     echo $result;
+
+    // デバッグ用関数の定義
+    function org_echo($val) {
+        if (DEBUG) {
+            echo $val;
+            echo '<br>';
+        }
+    }
+
+    function org_var_dump($val) {
+        if (DEBUG) {
+            echo '<pre>';
+            var_dump($val);
+            echo '</pre>';
+        }
+    }
 ?>
